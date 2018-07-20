@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/myswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ToggleButton
+        android:id="@+id/tgBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myswitch"/>
+
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="PAIR"
+        android:onClick="scanClicked"
+        android:layout_below="@+id/tgBtn"/>
+
+    <Button
+        android:id="@+id/discovery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan"
+        android:onClick="discoveryClicked"
+        android:text="DISCOVERY"/>
+
+    <ListView
+        android:id="@+id/pair_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/discovery"/>
+
+
+    <ListView
+        android:id="@+id/lsDevice"
+        android:layout_below="@+id/pair_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
