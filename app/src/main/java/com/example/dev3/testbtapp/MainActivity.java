@@ -237,6 +237,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void scanClicked(View v){
 
+        if(btAdapter.isDiscovering()){
+            btAdapter.cancelDiscovery();
+        }
+
+        // nanti make sure bluetooth already enabled
+        checkBTPermissions();
+
+        IntentFilter intFilterBondstate = new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+        registerReceiver(mBroadcastReceiver4, intFilterBondstate);
     }
 
 
